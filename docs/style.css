@@ -3,68 +3,38 @@
   padding: 0;
   box-sizing: border-box;
 }
+canvas#snow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
  html {
-      scroll-behavior: smooth; /* ✅ حركة سلسة عند الانتقال */
-    }
+      scroll-behavior: smooth; 
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1b1b1b;
+  overflow-x: hidden;
+  position: relative;
+}
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
+section {
+      height: 100vh; 
+}
+@media (max-width: 481px) {
+}
 
-    nav {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      background-color: #222;
-      z-index: 1000;
-      text-align: center;
-      padding: 15px 0;
-    }
 
-    nav a {
-      color: white;
-      margin: 0 20px;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
 
-    nav a:hover {
-      color: #ffd700;
-    }
 
-    section {
-      height: 100vh; /* ✅ كل قسم بارتفاع الشاشة */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      padding: 50px 20px
-    }
 
-    #home {
-       background: linear-gradient(135deg, #d3d3d3, #f0f0f0); 
-         background-repeat: repeat;
-     
-    }
-    #about {
-      background: linear-gradient(135deg, #8e44ad, #c0392b);
-    }
-
-    #contact {
-      background: linear-gradient(135deg, #2ecc71, #27ae60);
-    }
-
-    h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 20px;
-      max-width: 600px;
-      text-align: center;
-    }
+@media (min-width: 481px) {
+}
+@media (min-width: 769px) {
+}
+@media (min-width: 1025px) {}
