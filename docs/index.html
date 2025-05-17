@@ -3,85 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Zakarya | Portfolio</title>
+  <title>Portfolio | Zakarya</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+ 
 
-  <header>
-    <div class="container">
-      <h1>Zakarya</h1>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <section id="hero">
-    <div class="container">
-      <h2>Hello, I'm <span>waaaa baaarcaaa</span></h2>
-      <p>A Frontend Developer passionate about building modern web experiences.</p>
-    </div>
+<body>
+
+  <!-- ✅ شريط التنقل -->
+  <nav>
+    <a href="#home">الرئيسية</a>
+    <a href="#about">من نحن</a>
+    <a href="#contact">تواصل معنا</a>
+  </nav>
+
+  <!-- ✅ الصفحات تحت بعضها -->
+  <section id="home">
+    <h1>مرحبا بك في موقعنا</h1>
+    <p>هذه هي الصفحة الرئيسية التي تستقبلك بتصميم رائع.</p>
+    <canvas id="canvas3d" style="width: 400px; height: 300px;"></canvas>
+<script type="module">
+  import { Application } from 'https://unpkg.com/@splinetool/runtime@1.0.66/build/runtime.js';
+
+  const canvas = document.getElementById('canvas3d');
+  const app = new Application(canvas);
+  await app.load('https://prod.spline.design/Tv7y2ioIw-t5f2Uu/scene.splinecode');
+</script>
+
+>
+</spline-viewer>
+
   </section>
 
   <section id="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>I’m a web developer focusing on building clean and responsive user interfaces using HTML, CSS, and JavaScript.</p>
-    </div>
-  </section>
+    <h1>من نحن</h1>
+    <p>نحن فريق شغوف بتعليم البرمجة ومساعدة الآخرين.</p>
+   
 
-  <section id="projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <h3>Project 1</h3>
-          <p>Description of the project goes here.</p>
-        </div>
-        <div class="project-card">
-          <h3>Project 2</h3>
-          <p>Description of the project goes here.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills">
-    <div class="container">
-      <h2>Skills</h2>
-      <ul class="skills-list">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>React (learning)</li>
-      </ul>
-    </div>
   </section>
 
   <section id="contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <form id="contact-form">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </div>
+    <h1>تواصل معنا</h1>
+    <p>راسلنا في أي وقت عبر البريد الإلكتروني أو وسائل التواصل.</p>
   </section>
 
-  <footer>
-    <div class="container">
-      <p>© 2025 Zakarya. All rights reserved.</p>
-    </div>
-  </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spline without lag</title>
+  <style>
+   
+  </style>
+</head>
+<body>
+ 
 
-  <script src="script.js"></script>
+  
 </body>
 </html>
