@@ -18,9 +18,20 @@
 </head>
 <body>
   <canvas id="snow"></canvas>
-  
+   <!-- شاشة البداية -->
   <div class="intro">
-    <h1>Zakarya</h1>
+    <h1 id="animatedName"></h1>
+    <!-- الشرائح -->
+    <div class="slice" style="left: 0%;"></div>
+    <div class="slice" style="left: 10%;"></div>
+    <div class="slice" style="left: 20%;"></div>
+    <div class="slice" style="left: 30%;"></div>
+    <div class="slice" style="left: 40%;"></div>
+    <div class="slice" style="left: 50%;"></div>
+    <div class="slice" style="left: 60%;"></div>
+    <div class="slice" style="left: 70%;"></div>
+    <div class="slice" style="left: 80%;"></div>
+    <div class="slice" style="left: 90%;"></div>
   </div>
   <section class="home" id="home">
 
@@ -129,26 +140,50 @@ I love building clean, responsive websites that feel smooth and easy to use. Tur
 
 
 
-<script>    setTimeout(() => {
-      gsap.timeline()
-        .to(".intro h1", {
-         
-          opacity: 0,
-          duration: 1,
-          ease: "power2.inOut"
-        })
-        .to(".intro", {
-          scaleY: 0,
-         
-          opacity: 0,
-          duration: 1,
-          ease: "power2.inOut",
-          onComplete: () => {
-            document.querySelector(".intro").style.display = "none";
-            document.querySelector(".main-content").style.display = "block";
-          }
-        }, "-=0.5");
-    }, 900);
+<script>   // عرض الاسم بالحروف
+    const name = "ZAKARYA";
+    const container = document.getElementById("animatedName");
+
+    name.split("").forEach(char => {
+      const span = document.createElement("span");
+      span.textContent = char;
+      container.appendChild(span);
+    });
+
+    // أنيميشن الحروف
+    gsap.to("#animatedName span", {
+      y: 0,
+      opacity: 1,
+      stagger: 0.09,
+      duration: 0.2,
+      ease: "power2.out"
+    });
+
+    // بعد وقت، نخفي الحروف ثم الشرائح
+    setTimeout(() => {
+      const tl = gsap.timeline();
+
+      // إخفاء الحروف
+      tl.to("#animatedName span", {
+    
+        opacity: 0,
+        stagger: 0.1,
+        duration: 0.6,
+        ease: "power2.inOut"
+      });
+
+      // الشرائح تختفي للأعلى بشكل staggered
+      tl.to(".slice", {
+        y: "100%",
+        duration: 1,
+        stagger: 0.06,
+        ease: "power2.inOut",
+        onComplete: () => {
+          document.querySelector(".intro").style.display = "none";
+          document.querySelector(".main-content").style.display = "block";
+        }
+      },"<"); // تبدأ حركة الشرائح قبل نهاية حركة الحروف قليلاً
+    }, 1200);
 </script>
   <script src="script.js"></script>
 </body>
