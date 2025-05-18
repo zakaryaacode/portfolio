@@ -2,6 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family:poppins , sans-serif ;
 }
 canvas#snow {
   position: fixed;
@@ -12,6 +17,26 @@ canvas#snow {
   pointer-events: none;
   z-index: 0;
 }
+    /* شاشة البداية */
+    .intro {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .intro h1 {
+      color: white;
+      font-size: 4rem;
+      font-family: 'Arial', sans-serif;
+      letter-spacing: 2px;
+    }
  html {
       scroll-behavior: smooth; 
 }
@@ -34,34 +59,13 @@ section {
 
 
 
- .animated-text {
-    position: relative;
-    height: 3rem; 
-    overflow: hidden;
-  }
-  .animated-text h3 {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    margin: 0;
-    font-size: 2.5rem;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-    color: #00e5ff;
-  }
-  .animated-text h3.active {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-
-
-
 @media (min-width: 481px) {
 }
 @media (min-width: 769px) {
 }
 @media (min-width: 1025px) {}
-/*#00e5ff*/
+/*#00e5ff #00ffee
+font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
+font-family: 'Merriweather', 'Georgia', 'Times New Roman', serif;
+
+*/
