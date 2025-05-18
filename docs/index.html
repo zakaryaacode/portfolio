@@ -126,5 +126,16 @@ window.addEventListener("resize", () => {
 });
 
  </script>
+ 
+<script>
+  const texts = document.querySelectorAll('.animated-text h3');
+  let current = 0;
+
+  setInterval(() => {
+    texts[current].classList.remove('active');
+    current = (current + 1) % texts.length;
+    texts[current].classList.add('active');
+  }, 3000);
+</script>
 </body>
 </html>
