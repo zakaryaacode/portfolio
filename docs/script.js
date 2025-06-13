@@ -45,7 +45,7 @@ function update() {
 }
 
 // إنشاء 200 حبة ثلج
-for (let i = 0; i < 40; i++) {
+for (let i = 0; i < 70; i++) {
   createSnowflakes();
 }
 
@@ -56,3 +56,15 @@ window.addEventListener("resize", () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 });
+
+
+
+
+
+
+
+
+
+
+
+
