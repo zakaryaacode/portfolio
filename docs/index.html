@@ -1,37 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio | Zakarya</title>
-  <link rel="stylesheet" href="style.css" />  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Portfolio | Zakarya</title>
+<link rel="stylesheet" href="style.css" />  
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
- <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
-
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
 </head>
 <body>
-  <section class="home" id="home">
+<section class="home" id="home">
+  <div class="home-content">
+    <h1 id="hi">Hi, It's <span id="zaki">Zakarya</span></h1>
+    <h2 class="text-animation">I'm a <span>Frontend Developer</span></h2>  
+    <p>
+      A creative Frontend Developer with over 3 years of experience building fast,
+      scalable, and responsive web applications — driven by clean code, modern design, 
+      and exceptional user experience.
+    </p>
+    <div class="social-icons">
+      <a href="#"><i class="fi fi-brands-linkedin"></i></a>
+      <a href="#"><i class="fi fi-brands-github"></i></a>
+      <a href="#"><i class="fi fi-brands-instagram"></i></a>
+    </div>
+    <div class="btn-group">
+      <a href="#contact" class="btn">Contact</a>
+    </div>
+  </div>
+ 
 
-         <div class="home-content">
-              <h1>Hi, It's <span>Zakarya</span></h1>
-              <h3 class="text-animation">I'm a <span></span></h3>
-              <p>
-A creative Frontend Developer with over 3 years of experience building fast, scalable, and responsive web applications — driven by clean code, modern design, and exceptional user experience.         <div class="social-icons">
-               <a href="#"><i class="fi fi-brands-linkedin"></i></a>
-               <a href="#"><i class="fi fi-brands-github"></i></a>
-               <a href="#"><i class="fi fi-brands-instagram"></i></a>
-         </div>
-         <div class="btn-group">
-               <a href="#contact" class="btn">Contact</a>
-         </div>
-  </section>
+
+
+
+
+
+ <nav>
+    <button class="hamburger" aria-label="Toggle menu">
+      <span class="line line1"></span>
+      <span class="line line2"></span>
+    </button>
+  </nav>
+
+
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      
+      <h3>MENU</h3>
+    </div>
+    <ul class="menu-list">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Me</a></li>
+      <li><a href="#">Experience</a></li>
+      <li><a href="#">Projects</a></li>
+    </ul>
+    <h2>SOCIAL</h2>
+      <ul class="social-list">
+        <li><a href="#">GitHub</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Old Version</a></li>
+           <li id="haha"><a href="mailto:tasmirolislam@gmail.com">tasmirolislam@gmail.com</a></li>
+      </ul>
+  </aside>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -58,77 +112,9 @@ A creative Frontend Developer with over 3 years of experience building fast, sca
   <section id="skills">
             <h1>maaaaaa3</h1>
   </section>
-
   <section id="contact">
        <h1>ABSSSSSS</h1>
   </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <canvas id="snow"></canvas>
    <!-- شاشة البداية -->
   <div class="intro">
@@ -189,6 +175,34 @@ A creative Frontend Developer with over 3 years of experience building fast, sca
         }
       },"<"); // تبدأ حركة الشرائح قبل نهاية حركة الحروف قليلاً
     }, 1200);
+
+
+
+const hamburger = document.querySelector('.hamburger');
+const sidebar   = document.querySelector('.sidebar');
+const body      = document.body;
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  sidebar.classList.toggle('open');
+  body.classList.toggle('dimmed');
+});
+  if (!isOpen) {
+    sidebar.classList.add('open');
+  } else {
+    // نترك التأثير البصري أولاً
+    sidebar.style.opacity = '0';
+    sidebar.style.transform = 'translateX(100%)';
+
+    // نزيل الكلاس بعد 600ms ← نفس مدة transition في CSS
+    setTimeout(() => {
+      sidebar.classList.remove('open');
+      sidebar.style.opacity = '';
+      sidebar.style.transform = '';
+    }, 600);
+  }
+
+
 </script>
   <script src="script.js"></script>
 </body>

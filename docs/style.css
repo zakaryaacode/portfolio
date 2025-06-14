@@ -7,56 +7,99 @@ html { scroll-behavior: smooth; font-size: 16px; }
 .intro h1 {position: absolute; top: 50%; left: 50%;  transform: translate(-50%, -50%);  color: white;  font-size: 4rem; font-family:'Merriweather', 'Georgia', 'Times New Roman', serif; display: flex; gap: 3px; z-index: 10000; }
 body { margin: 0; padding: 0; background-color: #1b1b1b; overflow-x: hidden;}
 section { height: 100vh; }
+nav { position: fixed; top: 30px; right: 20px; z-index: 1001;}
+.hamburger { width: 40px; height: 20px; border: none; background-color: transparent; cursor: pointer; display: flex; flex-direction: column; justify-content: space-between; padding: 0;}
+.line { display: block; height: 5px; width: 100%; background: rgb(209, 209, 209); border-radius: 2px;  transition: transform 0.4s ease, opacity 0.2s ease; ;position: relative;}
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 100%;
+  background: #9b9b9b;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1);
+  padding: 40px 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 
+  opacity: 0;
+  transform: translateX(100%);
+  pointer-events: none;
+  transition: transform 0.4s ease, opacity 0.6s ease;
+}
 
+.sidebar.open {
+   right: 0;
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
 
+.hamburger:hover .line1 {
+  transform: rotate(8deg);
+}
+.hamburger:hover .line2 {
+  transform: rotate(-8deg);
+}
 
+/* عند الضغط: تتحوّل لحرف X */
+.hamburger.active .line1 {
+  transform: rotate(45deg);
+  position: absolute;
+  top: 7px;
+   background-color: rgb(0, 0, 0);
+}
+.hamburger.active .line2 {
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 7px;
+  background-color: rgb(0, 0, 0);
+}
 
+/* ترويسة وقوائم */
+.sidebar-header h2 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #000000;
+}
 
+/* ترويسة وقوائم */
+.sidebar-header h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #000000;
+}
+.social-list,
+.menu-list {
+  list-style: none;
+  margin-bottom: 20px;
+}
+.social-list li,
+.menu-list li {
+  margin: 10px 0;
+}
+.social-list a,
+.menu-list a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+.social-list a:hover,
+.menu-list a:hover {
+  color:  #000000;
+  box-shadow: -4px 0 12px rgba(20px, 0, 0, 0.1);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#haha{ 
+  position: absolute;
+  bottom: 0;
+}
+#haha a {
+  color: rgb(0, 0, 0); /* أو أي لون تريده */
+}
 
 
 
