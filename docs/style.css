@@ -254,9 +254,6 @@ nav { position: fixed; top: 30px; right: 20px; z-index: 1001;}
 
 
 
-
-
-
 @media (max-width: 481px) { 
  #hi{ font-size: 7vw ;}
  .home-content h2{
@@ -320,6 +317,7 @@ nav { position: fixed; top: 30px; right: 20px; z-index: 1001;}
   .home-content h2{
   font-size:  3vw ;
 }
+#hi{   white-space: nowrap; font-size: 6vw ; max-width: 1000vw   ;}
 
 
 

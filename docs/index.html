@@ -56,9 +56,10 @@
       <h3>MENU</h3>
     </div>
     <ul class="menu-list">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About Me</a></li>
-      <li><a href="#">contact me</a></li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#skills">Skills</a></li>
+       <li><a href="#contact">Contact Me</a></li>
     </ul>
     <h2>SOCIAL</h2>
       <ul class="social-list">
@@ -176,30 +177,32 @@
     }, 1200);
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.querySelector('.hamburger');
+  const sidebar   = document.querySelector('.sidebar');
+  const body      = document.body;
 
-const hamburger = document.querySelector('.hamburger');
-const sidebar   = document.querySelector('.sidebar');
-const body      = document.body;
+  // فتح/إغلاق القائمة
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    sidebar.classList.toggle('open');
+    body.classList.toggle('dimmed');
+  });
 
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active');
-  sidebar.classList.toggle('open');
-  body.classList.toggle('dimmed');
-});
-  if (!isOpen) {
-    sidebar.classList.add('open');
-  } else {
-    // نترك التأثير البصري أولاً
-    sidebar.style.opacity = '0';
-    sidebar.style.transform = 'translateX(100%)';
+  // أغلق القائمة عند النقر على أي رابط داخلها
+  const links = sidebar.querySelectorAll('a');
+  links.forEach(link => {
+    link.addEventListener('click', e => {
+      // لو href="#" نمنع الافتراضي لمنع إعادة تحميل الصفحة
+      if (link.getAttribute('href') === '#') e.preventDefault();
 
-    // نزيل الكلاس بعد 600ms ← نفس مدة transition في CSS
-    setTimeout(() => {
+      // تأكد أن الكلاسات تُزال
+      hamburger.classList.remove('active');
       sidebar.classList.remove('open');
-      sidebar.style.opacity = '';
-      sidebar.style.transform = '';
-    }, 600);
-  }
+      body.classList.remove('dimmed');
+    });
+  });
+});
 
 
 </script>
