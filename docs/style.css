@@ -52,38 +52,9 @@ nav { position: fixed; top: 30px; right: 20px; z-index: 1001;}
   margin-left: 2px;
   animation: blink 0.7s steps(1) infinite;
 }
-
 /* المؤشر يومض */
-@keyframes blink {
-  0%, 50% { opacity: 1; }
-  51%, 100% { opacity: 0; }
-}
+@keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; }}
 #bold{ font-weight: bold; color: white;}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -153,50 +124,15 @@ nav { position: fixed; top: 30px; right: 20px; z-index: 1001;}
 
 }
 #ktba {
-  max-width: 60vw;     /* لا يتجاوز 50% من عرض الشاشة */
+  max-width: 100vw;     /* لا يتجاوز 50% من عرض الشاشة */
   line-height: 1.6;     /* تباعد الأسطر لقراءة أفضل */
   text-align: left;     /* يضمن أن الكلام يظل على اليسار */
   font-size: clamp(0.7rem, 3vw, 1rem);
 }
-
 /* إضافية: ضبط مسافة العنصر المتحرك */
 .text-animation {
   margin-bottom: 1rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .btn-group {
   text-align: center;
   margin-top: 20px;
@@ -265,13 +201,18 @@ nav { position: fixed; top: 30px; right: 20px; z-index: 1001;}
 }
 
 .social-icons a {
-  font-size: 2rem;       /* حجم الأيقونات */
+  font-size: 1.7rem;      gap: 2.5rem; 
 }
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    
 
 
+
 }
-/* استجابة للشاشات الضيقة */
-@media (min-width: 481px) {
+@media (min-width: 481px) { 
   .home-content {
     max-width: 100%;
   }
@@ -279,12 +220,6 @@ nav { position: fixed; top: 30px; right: 20px; z-index: 1001;}
     font-size: 1.25rem;
   }
 
-
-
-
-
-}
-@media (min-width: 481px) { 
  #hi{ font-size: 7vw ;}
  .home-content h2{
   font-size: 3.7vw ;
@@ -294,8 +229,15 @@ nav { position: fixed; top: 30px; right: 20px; z-index: 1001;}
   padding-left: 2rem;
 }
 
+.social-icons a {
+  font-size: 2rem;       /* حجم الأيقونات */     gap: 2.8rem; 
+}
 
 
+.btn {
+  padding: 10px 30px;
+  font-size: 14px;
+}
 
 
 
@@ -315,7 +257,20 @@ nav { position: fixed; top: 30px; right: 20px; z-index: 1001;}
     top: 40%; /* فوق منتصف الصفحة */
 }
 
+.social-icons a {
+  font-size: 2.3rem;       /* حجم الأيقونات */     gap: 3.1 rem; 
+}
 
+.btn {
+  padding: 10px 30px;
+  font-size: 15px;
+}
+
+
+#ktba {
+  max-width: 42vw;   
+
+}
 
 
 
@@ -334,12 +289,19 @@ nav { position: fixed; top: 30px; right: 20px; z-index: 1001;}
 #hi{   white-space: nowrap; font-size: 6vw ; max-width: 1000vw   ;}
 
 
-.social-icons a {font-size: 2rem; gap: 3rem;} 
+.social-icons a {font-size: 2.5rem; gap: 4rem;} 
 
 
+.btn {
+  padding: 12px 32px;
+  font-size: 18px; 
+}
 
 
+#ktba {
+  max-width: 42vw;   
 
+}
 
 
 
@@ -348,6 +310,46 @@ nav { position: fixed; top: 30px; right: 20px; z-index: 1001;}
 
 
 }
-/*#00e5ff #00ffee
+
+
+
+
+
+
+
+
+
+
+
+
+
+ .stats-container {
+      display: flex;
+      gap: 2rem;
+      text-align: center;
+      flex-wrap: wrap;
+         flex-direction: column;
+    }
+
+   
+
+    .stat-box:hover {
+      transform: scale(1.05);
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: aqua;
+    }
+
+    .stat-label {
+      font-size: 1rem;
+      color: #b8b8b8;
+      margin-top: 8px;
+    }
+
+  
+    /*#00e5ff #00ffee
 font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
 font-family: 'Merriweather', 'Georgia', 'Times New Roman', serif  
