@@ -13,13 +13,7 @@ nav { position: fixed; top: 30px; right: 20px; z-index: 1001;}
 .sidebar {
   position: fixed; top: 0; right: 0;
   width: 280px; height: 100%;
-  background: linear-gradient(145deg,
-  #00fff2 0%,
-  #4dcaca 40%,
-  #54cde6 100%
-);
-
-
+  background: linear-gradient(145deg, #00b7ff 0%, #4dcaca 40%, #54cde6 100%);
   padding: 40px 20px;  z-index: 1000;
   display: flex; flex-direction: column;
   justify-content: flex-start;
@@ -255,32 +249,41 @@ nav { position: fixed; top: 30px; right: 20px; z-index: 1001;}
 
 
 
-/* استجابة للشاشات الضيقة */
+
+
+/* استجابة للشاشات الضيقة - أقل من أو تساوي 480px */
 @media (max-width: 480px) {
+  #hi {
+    font-size: 7vw;
+  }
+  .home-content h2 {
+    font-size: 3.7vw;
+  }
+
+.social-icons {
+  gap: 2rem;             /* مسافة بين الروابط */
+}
+
+.social-icons a {
+  font-size: 2rem;       /* حجم الأيقونات */
+}
+
+
+}
+/* استجابة للشاشات الضيقة */
+@media (min-width: 481px) {
   .home-content {
     max-width: 100%;
   }
   .cursor {
     font-size: 1.25rem;
   }
+
+
+
+
+
 }
-
-
-
-
-@media (max-width: 481px) { 
- #hi{ font-size: 7vw ;}
- .home-content h2{font-size: 3.7vw ;}}
-
-
-.social-icons a {font-size: 2rem; gap: 2rem;}      
-
-
-
-
-
-
-
 @media (min-width: 481px) { 
  #hi{ font-size: 7vw ;}
  .home-content h2{
@@ -290,7 +293,6 @@ nav { position: fixed; top: 30px; right: 20px; z-index: 1001;}
 .home-content {
   padding-left: 2rem;
 }
-
 
 
 
