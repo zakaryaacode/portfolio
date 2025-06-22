@@ -143,7 +143,7 @@ nav { position: fixed; top: 30px; right: 20px; z-index: 1001;}
   font-weight: bold;
   color: aqua;
   border: 2px solid aqua;
-  background: transparent;
+  background:transparent;
   text-decoration: none;
   transition: all 0.3s ease;
   border-radius: 8px;
@@ -175,13 +175,59 @@ nav { position: fixed; top: 30px; right: 20px; z-index: 1001;}
 
 
 
+ .stats-container {
+      display: flex;
+      gap: 2rem;
+      text-align: center;
+      flex-direction: column;
+    }
+
+   
+    .stat-number {
+      font-size: 2rem;
+      font-weight: bold;
+      color: aqua;
+      flex-direction: row-reverse;
+      align-items: end;
+    }
+
+    .stat-label {
+      font-size: 1rem;
+      color: #b8b8b8;
+      margin-top: 8px;
+    }
 
 
+.stats-container {
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 16px;
+}
+
+.stat-box {
+  text-align: center;
+}
 
 
+.stats-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+}
 
-
-
+.stat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  gap: 4px;
+}
 
 
 
@@ -203,13 +249,6 @@ nav { position: fixed; top: 30px; right: 20px; z-index: 1001;}
 .social-icons a {
   font-size: 1.7rem;      gap: 2.5rem; 
 }
-    .stats-container {
-        flex-direction: column;
-        align-items: center;
-      }
-    
-
-
 
 }
 @media (min-width: 481px) { 
@@ -238,10 +277,6 @@ nav { position: fixed; top: 30px; right: 20px; z-index: 1001;}
   padding: 10px 30px;
   font-size: 14px;
 }
-
-
-
-
 
 
 
@@ -318,36 +353,6 @@ nav { position: fixed; top: 30px; right: 20px; z-index: 1001;}
 
 
 
-
-
-
-
-
- .stats-container {
-      display: flex;
-      gap: 2rem;
-      text-align: center;
-      flex-wrap: wrap;
-         flex-direction: column;
-    }
-
-   
-
-    .stat-box:hover {
-      transform: scale(1.05);
-    }
-
-    .stat-number {
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: aqua;
-    }
-
-    .stat-label {
-      font-size: 1rem;
-      color: #b8b8b8;
-      margin-top: 8px;
-    }
 
   
     /*#00e5ff #00ffee
