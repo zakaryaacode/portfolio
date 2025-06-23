@@ -233,6 +233,66 @@ nav { position: fixed; top: 30px; right: 20px; z-index: 1001;}
 
 
 
+
+
+
+
+
+
+
+
+
+body {
+  --sb-track-color:transparent;
+  --sb-thumb-color: rgba(0, 255, 255, 0.87);
+  --sb-size: 13px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 7px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 7px;
+  border: 1px solid #232E33;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* استجابة للشاشات الضيقة - أقل من أو تساوي 480px */
 @media (max-width: 480px) {
   #hi {

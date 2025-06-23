@@ -100,3 +100,8 @@ function typeLoop() {
 
 // ابدأ التأثير بعد تحميل الصفحة
 document.addEventListener("DOMContentLoaded", typeLoop);
+
+
+
+
+
