@@ -33,8 +33,7 @@ nav { position: fixed; top: 30px; right: 20px; z-index: 1001;}
 .sidebar-header h3 { font-size: 1.5rem; margin-bottom: 10px; color: #000000;}
 .social-list,.menu-list {  list-style: none; margin-bottom: 20px; }
 .social-list li,.menu-list li { margin: 10px 0;}
-.social-list a,
-.menu-list a {text-decoration: none;color: #333;font-size: 1rem;transition: color 0.2s ease;}
+.social-list a,.menu-list a {text-decoration: none;color: #333;font-size: 1rem;transition: color 0.2s ease;}
 .social-list a:hover,.menu-list a:hover { color:  #000000; }
 #haha{ position: absolute;bottom: 0; }    #haha a { color: rgb(0, 0, 0);}
 #zaki{ color: aqua;}
