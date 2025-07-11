@@ -13,7 +13,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
 </head>
+
 <body>
 
 
@@ -213,30 +216,56 @@
           document.querySelector(".main-content").style.display = "block";
         }
       },"<"); // تبدأ حركة الشرائح قبل نهاية حركة الحروف قليلاً
-     tl.from("#hi",{x:300})
-     tl.from("#mama",{x:300 , duration:3})
-     tl.from(".btn-group",{x:300 , duration:3, opacity:0})
-     tl.from("#ktba",{x:300 , duration:3 ,opacity:0})
-     tl.from(".social-icons ",{x:300 , duration:3, opacity:0})
-     tl.from(".stats-container ",{x:300 , duration:3, opacity:0})
+    
 
 
+tl.from("#hi", {
+  y: -100,
+  duration: 1,
+  opacity: 0,
+  ease: "power2.out"
+}, "-=0.7")
 
+// العنصر الثاني
+.from("#mama", {
+  x: 100,
+  duration: 1,
+  opacity: 0,
+  ease: "power2.out"
+}, "-=0.5") // بدء قبل انتهاء السابق بنصف ثانية
 
+// الزرار
+.from(".btn-group", {
+  y: 50,
+  duration: 1,
+  opacity: 0,
+  ease: "power3.out"
+}, "-=0.5")
 
+// العنصر التالي
+.from("#ktba", {
+  y: 50,
+  duration: 1,
+  opacity: 0,
+  ease: "power3.out"
+}, "-=0.5")
 
+// الأيقونات الاجتماعية مع stagger
+.from(".social-icons", {
+  y: 50,
+  duration: 1,
+  opacity: 0,
+  stagger: 0.2,
+  ease: "power3.out"
+}, "-=0.5")
 
-
-
-
-
-
-
-
-
-
-
-
+// الإحصائيات
+.from(".stats-container", {
+  x: 50,
+  duration: 1,
+  opacity: 0,
+  ease: "power3.out"
+}, "-=0.6");
 
     }, 1200);
 
@@ -267,21 +296,96 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// جميع العناصر
+const elements = [ "#hi",];
+
+// نكرر على كل عنصر
+elements.forEach(selector => {
+  gsap.to(selector, {
+    y: -100,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.inOut",
+    scrollTrigger: {
+      trigger: selector,
+      start: "top top",
+    
+    toggleActions: "play reverse play reverse",
+      // عند النزول: play
+      // عند الصعود: reverse
+    }
+  });
+});
 
 
+const elementss = [
+  "#mama",
+ 
+  "#ktba",
+  ".social-icons",
+];
 
+// نكرر على كل عنصر
+elementss.forEach(selector => {
+  gsap.to(selector, {
+    y: -100,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.inOut",
+    scrollTrigger: {
+      trigger: selector,
+      start: "top 20%",
+    
+       toggleActions: "play reverse play reverse",
+      // عند النزول: play
+      // عند الصعود: reverse
+    }
+  });
+});
 
+const eelements = [
 
+  ".stats-container"
+];
 
+// نكرر على كل عنصر
+eelements.forEach(selector => {
+  gsap.to(selector, {
+    y: -100,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.inOut",
+    scrollTrigger: {
+      trigger: selector,
+      start: "top 20%",
+      toggleActions: "play reverse play reverse",
 
+      // عند النزول: play
+      // عند الصعود: reverse
+    }
+  });
+});
 
+const eelementss = [
+    ".btn-group",
+];
 
-
-
-
-
-
-
+// نكرر على كل عنصر
+eelementss.forEach(selector => {
+  gsap.to(selector, {
+    y: -100,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.inOut",
+    scrollTrigger: {
+      trigger: selector,
+      start: "top 30%", 
+       toggleActions: "play reverse play reverse",
+      // عند النزول: play
+      // عند الصعود: reverse
+    }
+  });
+});
 
 
 
