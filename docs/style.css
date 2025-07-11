@@ -48,9 +48,7 @@ nav { position: fixed; top: 30px; right: 20px; z-index: 1001;}
   white-space: nowrap;
   overflow: hidden;
 }
-.text-animation span{
-  color: aqua;
-}
+.text-animation span{color: aqua;}
 .cursor {
   display: inline-block;
   margin-left: 2px;
@@ -59,37 +57,14 @@ nav { position: fixed; top: 30px; right: 20px; z-index: 1001;}
 /* المؤشر يومض */
 @keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; }}
 #bold{ font-weight: bold; color: white;}
-
-
-
-
-
-
-
-
-/* 1. تغيير لون جميع الأيقونات دفعة واحدة */
-.social-icons a {
-  color:aqua;             /* اللون الافتراضي */
-  font-size: 1.5rem;       /* حجم الأيقونة */
-  transition: color 0.3s;
-  gap: 1rem;
-    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-}      
-
-.social-icons a:hover {
-  transform: scale(1.2) ;
- filter: drop-shadow( 0 0 5px aqua);
-}
-
-
-.social-icons {
-  padding-top: 1rem;
-  display: flex;     /* تفعيل Flexbox */
-  flex-direction: row; /* ترتيب أفقي (افتراضي) */
-  align-items: center; /* محاذاة عمودية وسطية داخل الحاوية */
-  gap: 3rem; 
-}
-
+ul li a { position: relative;text-decoration: none; color: #000000; font-weight: normal; display: inline-block; transition: transform 0.3s ease;}
+ul li a::after { content: ""; position: absolute; left: 0; bottom: -3px; width: 0; height: 2px; background-color: #000000; transition: width 0.5s ease;}
+ul li a:hover::after { width: 100%;}
+#haha a:hover { font-weight: normal; transform: none;}
+#haha a::after { width: 0 !important;}
+.social-icons a { color:aqua;             /* اللون الافتراضي */ font-size: 1.5rem;       /* حجم الأيقونة */ transition: color 0.3s; gap: 1rem; transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;}      
+.social-icons a:hover { transform: scale(1.2) ;filter: drop-shadow( 0 0 5px aqua);}
+.social-icons { padding-top: 1rem; display: flex;     /* تفعيل Flexbox */ flex-direction: row; /* ترتيب أفقي (افتراضي) */ align-items: center; /* محاذاة عمودية وسطية داخل الحاوية */ gap: 3rem; }
 .home-content {
   position: absolute;
   top: 30%; /* فوق منتصف الصفحة */
@@ -104,42 +79,27 @@ nav { position: fixed; top: 30px; right: 20px; z-index: 1001;}
  
   box-sizing: border-box;
 }
-
-
-/* ضبط حجم الخط بشكل نسبي لتجاوب أفضل */
 .home-content h1,
 .home-content h2,
-.home-content p {
-  margin: 0 0 0rem 0;        /* مسافة بسيطة أسفل كل عنصر */
-  line-height: 1.3;
-}
+.home-content p { margin: 0 0 0rem 0;        /* مسافة بسيطة أسفل كل عنصر */ line-height: 1.3;}
 
-/* أحجام نص متجاوبة */
-#hi {
-  padding-top: 1rem;
-  font-size: clamp(1.5rem, 5vw, 2.5rem);
-   max-width: 70vw;    
-}
-#mama {
-  font-size: clamp(1.25rem, 4vw, 2rem);
-   max-width: 70vw;    
-}
-#ktba {
-  font-size: clamp(0.7rem, 3vw, 1rem);
-
-}
-#ktba {
-  max-width: 100vw;     /* لا يتجاوز 50% من عرض الشاشة */
-  line-height: 1.6;     /* تباعد الأسطر لقراءة أفضل */
-  text-align: left;     /* يضمن أن الكلام يظل على اليسار */
-  font-size: clamp(0.7rem, 3vw, 1rem);
-}
-/* إضافية: ضبط مسافة العنصر المتحرك */
+#hi { padding-top: 1rem; font-size: clamp(1.5rem, 5vw, 2.5rem);  max-width: 70vw;    }
+#mama {  font-size: clamp(1.25rem, 4vw, 2rem);  max-width: 70vw;    }
+#ktba { font-size: clamp(0.7rem, 3vw, 1rem);}
+#ktba { max-width: 100vw;  line-height: 1.6; text-align: left; font-size: clamp(0.7rem, 3vw, 1rem);}
 .text-animation { margin-bottom: 1rem;}
 .btn-group { text-align: center; margin-top: 20px;}
 .btn { padding: 12px 32px; font-size: 18px; font-weight: bold; color: aqua; border: 2px solid aqua; background:transparent; text-decoration: none; transition: all 0.3s ease; border-radius: 8px; display: inline-block; cursor: pointer;  position: relative;}
 .btn:hover { transform: scale(1.04); /* حجم مناسب */ color:rgb(0, 0, 0); background-color: aqua; box-shadow: 0 0 15px aqua; border-color: transparent;}
 
+.stats-container { position: absolute;bottom: 50px; right: 0;   display: flex; flex-direction: column; align-items: flex-end; gap: 13px;  padding: 2px 6px;}
+
+.stat-box { display: flex;        flex-direction: column;    align-items: flex-end;  text-align: right;      }
+
+.stat-number { font-size: 2rem;           font-weight: bold;  color: aqua;     }
+
+.stat-label { font-size: 1rem;    color: #b8b8b8;    margin-top: 5px;  }
+.home-content {  width: 100%;}
 
 
 
@@ -154,46 +114,76 @@ nav { position: fixed; top: 30px; right: 20px; z-index: 1001;}
 
 
 
-/* الحاوية الرئيسية لكل الإحصائيات */
-.stats-container {
-  position: absolute;            /* وضع الحاوية في مكان محدد داخل الصفحة */
-  bottom: 50px;                  /* تبعد 50px من الأسفل */
-  right: 0;                      /* محاذاة إلى اليمين */
-  display: flex;                 /* تفعيل Flexbox */
-  flex-direction: column;       /* ترتيب العناصر عموديًا */
-  align-items: flex-end;        /* محاذاة كل العناصر إلى أقصى اليمين */
-  gap: 13px;                     /* مسافة بين كل صندوق إحصائي */
- padding: 2px 6px;              /* حشوة داخلية بسيطة */
-}
-
-/* كل صندوق يمثل إحصائية واحدة */
-.stat-box {
-  display: flex;                 /* Flexbox داخل كل صندوق */
-  flex-direction: column;       /* ترتيب داخلي رأسي */
-  align-items: flex-end;        /* محاذاة المحتوى إلى اليمين */
-  text-align: right;            /* توجيه النص إلى اليمين */
-              /* مسافة صغيرة بين الرقم والوصف */
-}
-
-/* رقم الإحصائية */
-.stat-number {
-  font-size: 2rem;              /* حجم كبير للرقم */
-  font-weight: bold;            /* جعل الخط سميك */
-  color: aqua;                  /* اللون أكوا (سماوي فاتح) */
-}
-
-/* وصف الإحصائية */
-.stat-label {
-  font-size: 1rem;              /* حجم أصغر للنص */
-  color: #b8b8b8;               /* لون رمادي فاتح */
-  margin-top: 5px;              /* مسافة بين الرقم والوصف */
-}
 
 
 
-.home-content {
-  width: 100%;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

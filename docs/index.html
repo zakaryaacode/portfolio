@@ -31,8 +31,6 @@
     
     
     
-    
-    
     <p id="ktba">
       A creative Frontend Developer with over<span id="bold"> 3 years of experience </span>building fast,
       scalable, and responsive web-applications — driven by clean code, modern design, 
@@ -57,7 +55,7 @@
     <div class="sidebar-header">
       <h3>MENU</h3>
     </div>
-    <ul class="menu-list">
+    <ul class="menu-list"  id="active">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About Me</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -138,6 +136,25 @@
   <section id="contact">
        <h1>ABSSSSSS</h1>
   </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <canvas id="snow"></canvas>
    <!-- شاشة البداية -->
   <div class="intro">
@@ -185,7 +202,6 @@
         duration: 0.6,
         ease: "power2.inOut"
       });
-
       // الشرائح تختفي للأعلى بشكل staggered
       tl.to(".slice", {
         y: "100%",
@@ -197,8 +213,32 @@
           document.querySelector(".main-content").style.display = "block";
         }
       },"<"); // تبدأ حركة الشرائح قبل نهاية حركة الحروف قليلاً
-    }, 1200);
+     tl.from("#hi",{x:300})
+     tl.from("#mama",{x:300 , duration:3})
+     tl.from(".btn-group",{x:300 , duration:3, opacity:0})
+     tl.from("#ktba",{x:300 , duration:3 ,opacity:0})
+     tl.from(".social-icons ",{x:300 , duration:3, opacity:0})
+     tl.from(".stats-container ",{x:300 , duration:3, opacity:0})
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }, 1200);
 
 document.addEventListener('DOMContentLoaded', () => {
   const hamburger = document.querySelector('.hamburger');
@@ -226,6 +266,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </script>
   <script src="script.js"></script>
